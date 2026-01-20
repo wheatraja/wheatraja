@@ -1,143 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Wheat Raja | Chakki Fresh Atta</title>
-    <meta name="description" content="Wheat Raja provides chakki fresh MP wheat atta with high fibre, high protein and no preservatives. Order easily on WhatsApp.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Wheat Raja | Premium Chakki Fresh Atta</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Wheat Raja offers premium chakki fresh MP wheat atta with high fibre and protein. Fresh grinding, hygienic packaging. Order easily on WhatsApp.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #ffffff;
-            color: #333;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        header {
-            background: #4E342E;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+:root {
+    --gold: #D4AF37;
+    --dark: #3E2723;
+    --light: #F9F7F3;
+    --green: #2E7D32;
+    --text: #333;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        header p {
-            margin-top: 5px;
-            font-size: 16px;
-        }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: #ffffff;
+}
 
-        .section {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-            text-align: center;
-        }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #3E2723, #4E342E);
+    color: #fff;
+    padding: 28px 20px;
+    text-align: center;
+}
 
-        .hero {
-            background: #F5F1EA;
-        }
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin: 0;
+    letter-spacing: 1px;
+}
 
-        .hero h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+header p {
+    margin-top: 6px;
+    font-size: 15px;
+    opacity: 0.9;
+}
 
-        .hero p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
+/* SECTIONS */
+.section {
+    padding: 70px 20px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #2E7D32;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-        }
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
-        }
+/* HERO */
+.hero {
+    background: var(--light);
+    text-align: center;
+}
 
-        .feature-box {
-            background: #fafafa;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #eee;
-        }
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
 
-        .qr-section img {
-            max-width: 220px;
-            margin-top: 20px;
-        }
+.hero p {
+    font-size: 17px;
+    max-width: 720px;
+    margin: auto;
+    line-height: 1.7;
+}
 
-        footer {
-            background: #4E342E;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
-        }
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 34px;
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(46,125,50,0.35);
+    transition: all 0.3s ease;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
-            }
-            .hero h2 {
-                font-size: 22px;
-            }
-        }
-    </style>
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px rgba(46,125,50,0.45);
+}
+
+/* QR SECTION */
+.qr-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.qr-box img {
+    width: 230px;
+    margin-top: 25px;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.card h4 {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: #fff;
+    text-align: center;
+    padding: 28px 15px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: #fff;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 12px 30px rgba(37,211,102,0.4);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <img src="Wheat Raja Cover Photo.png" alt="Wheat Raja" width="600" height="300">
-    <h2 style="color: ##EFBF04;">Care in every grain because purity should never be optional</h2>
+    <h1>Wheat Raja</h1>
+    <p>Premium Chakki Fresh Atta for Healthy Families</p>
 </header>
 
 <section class="section hero">
-    <h2>Chakki Fresh Atta for Healthy Families</h2>
-    <p>MP Wheat • Fresh Grinding • No Preservatives • Hygienic Packing</p>
+    <div class="container">
+        <h2>Pure. Fresh. Stone-Ground Perfection.</h2>
+        <p>
+            Carefully selected MP wheat, traditionally stone-ground for superior nutrition,
+            taste, and freshness — delivered hygienically to your home.
+        </p>
 
-    <a class="btn" href="https://wa.me/c/917042905005" target="_blank">
-        Order on WhatsApp
-    </a>
-    <h2>Scan & Order on WhatsApp</h2>
-    <p>Scan the QR code below to view our WhatsApp Catalogue and place your order instantly.</p>
-
-    <!-- Upload your WhatsApp QR image with this filename -->
-    <img src="whatsapp-qr.png" alt="Wheat Raja WhatsApp Catalogue QR" width="300" height="300">
+        <a href="https://wa.me/c/917042905005" target="_blank" class="btn">
+            Order on WhatsApp
+        </a>
+    </div>
 </section>
 
 <section class="section">
-    <h3>Why Wheat Raja</h3>
-    <div class="features">
-        <div class="feature-box">✔ High Fibre</div>
-        <div class="feature-box">✔ High Protein</div>
-        <div class="feature-box">✔ No Added Sugar</div>
-        <div class="feature-box">✔ No Preservatives</div>
+    <div class="container">
+        <div class="qr-box">
+            <h2>Scan & Order Instantly</h2>
+            <p>Scan the QR code below to explore our WhatsApp catalogue and place your order in seconds.</p>
+            <img src="whatsapp-qr.png" alt="Wheat Raja WhatsApp Catalogue QR">
+        </div>
     </div>
 </section>
-    
+
+<section class="section">
+    <div class="container">
+        <h2 style="text-align:center;">Our Products</h2>
+        <div class="grid">
+            <div class="card"><h4>Chakki Fresh MP Atta</h4></div>
+            <div class="card"><h4>MP Sharbati Premium Atta</h4></div>
+            <div class="card"><h4>Fresh Grinding on Order</h4></div>
+            <div class="card"><h4>Hygienic Packaging</h4></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background:#F9F7F3;">
+    <div class="container">
+        <h2 style="text-align:center;">Why Wheat Raja</h2>
+        <div class="grid">
+            <div class="card"><h4>✔ High Fibre</h4></div>
+            <div class="card"><h4>✔ High Protein</h4></div>
+            <div class="card"><h4>✔ No Preservatives</h4></div>
+            <div class="card"><h4>✔ Traditional Chakki Method</h4></div>
+        </div>
+    </div>
+</section>
+
 <footer>
-    <p>📍 Noida | 📞 +91-7042905005</p>
-    <p>© 2026 Wheat Raja. All rights reserved.</p>
+    <p>📍 Noida | 📞 WhatsApp Orders Available</p>
+    <p>© 2026 Wheat Raja. Crafted with care.</p>
 </footer>
+
+<a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="whatsapp-float" target="_blank">
+    WhatsApp Order
+</a>
 
 </body>
 </html>
