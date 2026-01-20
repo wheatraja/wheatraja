@@ -1,205 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Wheat Raja® | Royal Chakki Fresh Atta</title>
+    <meta charset="UTF-8">
+    <title>Wheat Raja | Chakki Fresh Atta</title>
+    <meta name="description" content="Wheat Raja provides chakki fresh MP wheat atta with high fibre, high protein and no preservatives. Order easily on WhatsApp.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Wheat Raja crafts premium chakki fresh atta from selected MP wheat. Stone-ground, nutrient rich, hygienically packed. Order on WhatsApp.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #ffffff;
+            color: #333;
+        }
 
-<style>
-/* =====================
-   ROOT & RESET
-===================== */
-:root{
-  --dark:#1f1411;
-  --brown:#3a241d;
-  --gold:#d6b25e;
-  --cream:#faf7f2;
-  --green:#1e7f4b;
-}
+        header {
+            background: #4E342E;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Inter',sans-serif;
-  background:#fff;
-  color:#2b2b2b;
-  overflow-x:hidden;
-}
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
 
-/* =====================
-   HERO BACKGROUND MESH
-===================== */
-.hero-wrap{
-  position:relative;
-  background:linear-gradient(135deg,#1f1411,#3a241d);
-  color:#fff;
-  padding:120px 20px 160px;
-  overflow:hidden;
-}
+        header p {
+            margin-top: 5px;
+            font-size: 16px;
+        }
 
-.mesh{
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 20% 20%,rgba(214,178,94,0.35),transparent 40%),
-    radial-gradient(circle at 80% 30%,rgba(255,255,255,0.08),transparent 45%),
-    radial-gradient(circle at 50% 80%,rgba(214,178,94,0.25),transparent 45%);
-  animation:float 18s infinite alternate ease-in-out;
-}
+        .section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+            text-align: center;
+        }
 
-@keyframes float{
-  from{transform:translateY(0)}
-  to{transform:translateY(-40px)}
-}
+        .hero {
+            background: #F5F1EA;
+        }
 
-/* =====================
-   CONTAINER
-===================== */
-.container{
-  max-width:1200px;
-  margin:auto;
-  position:relative;
-  z-index:2;
-}
+        .hero h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-/* =====================
-   HEADER
-===================== */
-header{
-  position:absolute;
-  top:30px;
-  left:0;
-  right:0;
-  text-align:center;
-  z-index:3;
-}
-header h1{
-  font-family:'Playfair Display',serif;
-  font-size:44px;
-  letter-spacing:1px;
-}
-header span{
-  font-size:13px;
-  opacity:.85;
-}
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
 
-/* =====================
-   HERO CONTENT
-===================== */
-.hero{
-  text-align:center;
-}
-.hero h2{
-  font-family:'Playfair Display',serif;
-  font-size:52px;
-  margin-bottom:18px;
-}
-.hero p{
-  max-width:760px;
-  margin:auto;
-  font-size:18px;
-  line-height:1.8;
-  opacity:.95;
-}
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2E7D32;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
 
-/* CTA */
-.cta{
-  margin-top:42px;
-  display:inline-flex;
-  align-items:center;
-  gap:12px;
-  padding:18px 42px;
-  border-radius:60px;
-  background:linear-gradient(135deg,#1e7f4b,#2fa66d);
-  color:#fff;
-  text-decoration:none;
-  font-weight:500;
-  box-shadow:0 30px 60px rgba(30,127,75,.45);
-  transition:.35s;
-}
-.cta:hover{
-  transform:translateY(-4px);
-  box-shadow:0 40px 80px rgba(30,127,75,.6);
-}
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
 
-/* =====================
-   SECTION BASE
-===================== */
-section{
-  padding:120px 20px;
-}
-.light{background:var(--cream)}
-.center{text-align:center}
+        .feature-box {
+            background: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
 
-/* =====================
-   GLASS CARD
-===================== */
-.glass{
-  background:rgba(255,255,255,.65);
-  backdrop-filter:blur(18px);
-  border-radius:28px;
-  padding:60px;
-  box-shadow:0 40px 90px rgba(0,0,0,.08);
-}
-
-/* =====================
-   GRID CARDS
-===================== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:32px;
-  margin-top:60px;
-}
-.card{
-  background:#fff;
-  padding:42px 32px;
-  border-radius:26px;
-  box-shadow:0 25px 70px rgba(0,0,0,.07);
-  transition:.35s;
-}
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 40px 100px rgba(0,0,0,.12);
-}
-.card h3{
-  font-family:'Playfair Display',serif;
-  font-size:22px;
-}
-
-/* =====================
-   DARK STRIP
-===================== */
-.dark{
-  background:linear-gradient(135deg,#1f1411,#2a1915);
-  color:#fff;
-}
-.dark h2,.dark p{color:#fff}
-
-/* =====================
-   QR
-===================== */
-.qr img{
-  width:260px;
-  margin-top:32px;
-}
-
-/* =====================
-   FOOTER
-===================== */
-footer{
-  background:#120b09;
-  color:#bbb;
-  text-align:center;
-  padding:50px 20px;
-  font-size:14px;
-}
-
-/* =====================
+        .qr-section img {
+            max-width: 220px;
+            margin-top: 20px;
+        }
+		
+		/* =====================
    FLOATING WHATSAPP
 ===================== */
 .whatsapp{
@@ -215,85 +100,63 @@ footer{
   box-shadow:0 25px 60px rgba(37,211,102,.5);
   animation:pulse 2.2s infinite;
 }
-@keyframes pulse{
-  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
-  70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
-  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
-}
 
-/* =====================
-   MOBILE
-===================== */
-@media(max-width:768px){
-  .hero h2{font-size:38px}
-  section{padding:90px 18px}
-  .glass{padding:40px 26px}
-}
-</style>
+        footer {
+            background: #4E342E;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 26px;
+            }
+            .hero h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Wheat Raja</h1>
-  <span>Royal Chakki Fresh Atta</span>
+    <img src="Wheat Raja Cover Photo.png" alt="Wheat Raja" width="600" height="300">
+    <h2 style="color: ##EFBF04;">Care in every grain because purity should never be optional</h2>
 </header>
 
-<div class="hero-wrap">
-  <div class="mesh"></div>
-  <div class="container hero">
-    <h2>From Pure Grain<br>To Royal Nourishment</h2>
-    <p>
-      Wheat Raja brings together carefully sourced MP wheat and traditional
-      stone-grinding to create atta that is rich in nutrition, flavour,
-      and authenticity — crafted for families who choose quality.
-    </p>
-    <a href="https://wa.me/c/917042905005" class="cta" target="_blank">
-      Order on WhatsApp
+<section class="section hero">
+    <h2>Chakki Fresh Atta for Healthy Families</h2>
+    <p>MP Wheat • Fresh Grinding • No Preservatives • Hygienic Packing</p>
+
+    <a class="btn" href="https://wa.me/c/917042905005" target="_blank">
+        Order on WhatsApp
     </a>
-  </div>
-</div>
+    <h2>Scan & Order on WhatsApp</h2>
+    <p>Scan the QR code below to view our WhatsApp Catalogue and place your order instantly.</p>
 
-<section class="light">
-  <div class="container center">
-    <div class="glass qr">
-      <h2>Scan. Choose. Delivered.</h2>
-      <p>Explore our WhatsApp catalogue and place your order in seconds.</p>
-      <img src="whatsapp-qr.png" alt="Wheat Raja WhatsApp QR">
-    </div>
-  </div>
+    <!-- Upload your WhatsApp QR image with this filename -->
+    <img src="whatsapp-qr.png" alt="Wheat Raja WhatsApp Catalogue QR" width="300" height="300">
 </section>
 
-<section>
-  <div class="container center">
-    <h2>Our Craft</h2>
-    <div class="grid">
-      <div class="card"><h3>Chakki Fresh MP Atta</h3></div>
-      <div class="card"><h3>MP Sharbati Premium</h3></div>
-      <div class="card"><h3>Fresh Grinding on Order</h3></div>
-      <div class="card"><h3>Hygienic Sealed Packing</h3></div>
+<section class="section">
+    <h3>Why Wheat Raja</h3>
+    <div class="features">
+        <div class="feature-box">✔ High Fibre</div>
+        <div class="feature-box">✔ High Protein</div>
+        <div class="feature-box">✔ No Added Sugar</div>
+        <div class="feature-box">✔ No Preservatives</div>
     </div>
-  </div>
 </section>
-
-<section class="dark">
-  <div class="container center">
-    <h2>Why Families Trust Wheat Raja</h2>
-    <div class="grid">
-      <div class="card"><h3>High Fibre & Protein</h3></div>
-      <div class="card"><h3>No Preservatives</h3></div>
-      <div class="card"><h3>Traditional Stone Grinding</h3></div>
-      <div class="card"><h3>Consistent Royal Quality</h3></div>
-    </div>
-  </div>
-</section>
-
+    
 <footer>
-  <p>📍 Noida · WhatsApp Orders Available</p>
-  <p>© 2026 Wheat Raja · Crafted with Integrity</p>
+    <p>📍 Noida | 📞 +91-7042905005</p>
+    <p>© 2026 Wheat Raja. All rights reserved.</p>
 </footer>
 
-<a href="https://wa.me/c/917042905005" class="whatsapp" target="_blank">
+<a href="https://wa.me/YOUR_WHATSAPP_NUMBER" class="whatsapp" target="_blank">
   WhatsApp Order
 </a>
 
