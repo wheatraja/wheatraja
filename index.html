@@ -2,163 +2,310 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wheat Raja | Chakki Fresh Atta</title>
-    <meta name="description" content="Wheat Raja provides chakki fresh MP wheat atta with high fibre, high protein and no preservatives. Order easily on WhatsApp.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Wheat Raja | Premium Chakki Fresh Atta</title>
+    <meta name="description" content="Artisanal MP Wheat Atta. High fibre, high protein, and zero preservatives. Experience purity in every grain.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --primary-gold: #D4AF37;
+            --deep-earth: #2D1B14;
+            --accent-green: #2E7D32;
+            --cream: #FDFCF8;
+            --text-main: #1A1A1A;
+            --glass: rgba(255, 255, 255, 0.85);
+            --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
         body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #ffffff;
-            color: #333;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--cream);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        header {
-            background: #4E342E;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
+        /* --- High-End Navigation --- */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            padding: 1.2rem 0;
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--deep-earth);
+            letter-spacing: 1px;
         }
 
-        header p {
-            margin-top: 5px;
-            font-size: 16px;
-        }
-
-        .section {
-            padding: 40px 20px;
-            max-width: 1100px;
-            margin: auto;
-            text-align: center;
-        }
-
+        /* --- Hero Section --- */
         .hero {
-            background: #F5F1EA;
+            padding: 180px 20px 100px;
+            text-align: center;
+            background: radial-gradient(circle at top right, #F5F1EA, var(--cream));
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .hero img.cover {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            transition: var(--transition);
+        }
+
+        .hero img.cover:hover { transform: scale(1.02); }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: var(--deep-earth);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
         }
 
         .hero p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: #2E7D32;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
             font-weight: 600;
         }
 
-        .features {
+        /* --- Premium Buttons --- */
+        .btn-premium {
+            display: inline-flex;
+            align-items: center;
+            padding: 1.2rem 3rem;
+            background: var(--deep-earth);
+            color: white;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            box-shadow: 0 15px 30px rgba(45, 27, 20, 0.2);
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(45, 27, 20, 0.3);
+            background: #3d261d;
+        }
+
+        /* --- Feature Grid --- */
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--deep-earth);
+        }
+
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 20px;
         }
 
-        .feature-box {
-            background: #fafafa;
-            padding: 15px;
-            border-radius: 8px;
-            border: 1px solid #eee;
+        .feature-card {
+            background: white;
+            padding: 3rem 2rem;
+            border-radius: 24px;
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: var(--transition);
+            text-align: center;
         }
 
-        .qr-section img {
-            max-width: 220px;
-            margin-top: 20px;
+        .feature-card:hover {
+            background: var(--deep-earth);
+            color: white;
+            transform: translateY(-10px);
         }
-		
-		/* =====================
-   FLOATING WHATSAPP
-===================== */
-.whatsapp{
-  position:fixed;
-  right:26px;
-  bottom:26px;
-  padding:18px 24px;
-  border-radius:50px;
-  background:#25D366;
-  color:#fff;
-  text-decoration:none;
-  font-weight:500;
-  box-shadow:0 25px 60px rgba(37,211,102,.5);
-  animation:pulse 2.2s infinite;
-}
+
+        .feature-card span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* --- QR Section --- */
+        .qr-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 40px;
+            max-width: 700px;
+            margin: 6rem auto;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            text-align: left;
+        }
+
+        .qr-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            border: 8px solid #f8f8f8;
+        }
+
+        /* --- Floating CTA --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover { transform: scale(1.05); }
 
         footer {
-            background: #4E342E;
-            color: #fff;
+            padding: 80px 20px;
+            background: var(--deep-earth);
+            color: #f0f0f0;
             text-align: center;
-            padding: 15px;
-            font-size: 14px;
         }
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 26px;
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+		
+		.nav-logo-new {
+			font-family: 'Cinzel', serif;
+			font-size: 1.8rem;
+			letter-spacing: 4px;
+			background: linear-gradient(to right, #C5A059, #F1E2AF, #C5A059);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .qr-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
             }
-            .hero h2 {
-                font-size: 22px;
-            }
+            .hero h1 { font-size: 2.8rem; }
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <img src="Wheat Raja Cover Photo.png" alt="Wheat Raja" width="600" height="300">
-    <h2 style="color: ##EFBF04;">Care in every grain because purity should never be optional</h2>
-</header>
+    <nav>
+        <div class="nav-logo-new">WHEAT RAJA</div>
+    </nav>
 
-<section class="section hero">
-    <h2>Chakki Fresh Atta for Healthy Families</h2>
-    <p>MP Wheat • Fresh Grinding • No Preservatives • Hygienic Packing</p>
+    <section class="hero">
+		<p class="reveal">Dedicated to WHEAT. Committed to PURITY.</p>
+        <img src="Wheat Raja Cover Photo New.png" alt="Wheat Raja Premium Atta" class="cover">
+        <h1 class="reveal">Care in every grain because purity should never be optional</h1>
+        <a href="https://wa.me/c/917042905005" target="_blank" class="btn-premium reveal">Order Fresh Atta</a>
+    </section>
 
-    <a class="btn" href="https://wa.me/c/917042905005" target="_blank">
-        Order on WhatsApp
+    <section style="padding: 100px 0; background: #fff;">
+        <div style="max-width: 1100px; margin: auto; text-align: center;">
+            <h2 class="section-title reveal">Why Wheat Raja?</h2>
+            <div class="features-grid">
+				<div class="feature-card reveal">
+                    <span>✨</span>
+                    <h3>Freshly Ground</h3>
+                    <p>Milled only after order to preserve freshness, aroma, and taste.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <span>🌾</span>
+                    <h3>High Fibre</h3>
+                    <p>Natural bran retained for better digestion and health.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <span>💪</span>
+                    <h3>High Protein</h3>
+                    <p>Made from selected MP Wheat for superior nutrition.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <span>🛡️</span>
+                    <h3>Zero Additives</h3>
+                    <p>No preservatives, no sugar, just 100% fresh grains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <div class="qr-card">
+            <img src="whatsapp-qr.png" alt="WhatsApp Catalogue">
+            <div>
+                <h2 style="font-family: 'Playfair Display'; margin-bottom: 1rem;">Scan & Browse</h2>
+                <p style="color: #666;">Scan the QR code to view our daily fresh grind catalogue and order instantly via WhatsApp.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p style="font-size: 1.2rem; margin-bottom: 1rem;">📍 Noida 📞 +91-7042905005</p>
+        <p style="opacity: 0.6;">© 2026 Wheat Raja. All rights reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/c/917042905005" class="whatsapp-float" target="_blank">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.025 3.284l-.548 2.003 2.051-.538c.952.551 1.949.911 3.241.911 3.179 0 5.766-2.587 5.767-5.767 0-3.18-2.587-5.759-5.768-5.759zm3.69 7.991c-.144.405-.838.775-1.151.821-.291.042-.66.074-1.071-.059-.247-.08-.562-.182-1.033-.374-1.997-.812-3.291-2.86-3.39-2.99-.099-.132-.812-.977-.812-1.852 0-.875.454-1.306.616-1.483.162-.177.353-.221.471-.221.118 0 .235.001.338.006.11.005.259-.042.405.31.147.354.5.1.5.1s1.218-.6.5.31c-.147.405-.291.662-.435.82-.144.158-.291.171-.144.42.147.25.644 1.06 1.385 1.72.952.848 1.756 1.111 2.006 1.243.25.132.396.111.543-.059.147-.17.632-.736.801-.986.17-.25.338-.206.574-.118.235.088 1.485.7 1.735.824.25.125.417.182.479.288.061.106.061.612-.083 1.017z"/></svg>
+        Order Now
     </a>
-    <h2>Scan & Order on WhatsApp</h2>
-    <p>Scan the QR code below to view our WhatsApp Catalogue and place your order instantly.</p>
 
-    <!-- Upload your WhatsApp QR image with this filename -->
-    <img src="whatsapp-qr.png" alt="Wheat Raja WhatsApp Catalogue QR" width="300" height="300">
-</section>
+    <script>
+        // Smooth Reveal on Scroll Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
 
-<section class="section">
-    <h3>Why Wheat Raja</h3>
-    <div class="features">
-        <div class="feature-box">✔ High Fibre</div>
-        <div class="feature-box">✔ High Protein</div>
-        <div class="feature-box">✔ No Added Sugar</div>
-        <div class="feature-box">✔ No Preservatives</div>
-    </div>
-</section>
-    
-<footer>
-    <p>📍 Noida | 📞 +91-7042905005</p>
-    <p>© 2026 Wheat Raja. All rights reserved.</p>
-</footer>
-
-<a href="https://wa.me/c/917042905005" class="whatsapp" target="_blank">
-  WhatsApp Order
-</a>
-
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
